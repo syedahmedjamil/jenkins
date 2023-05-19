@@ -1,4 +1,5 @@
-VM : aws
+VM : AWS
+
 OS : ubuntu 
 
 //install ansible
