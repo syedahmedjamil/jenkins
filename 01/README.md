@@ -1,5 +1,5 @@
 # vm details
-- VM : AWS
+- VM : AWS ec2 t2.micro
 - OS : ubuntu 
 
 # install ansible
