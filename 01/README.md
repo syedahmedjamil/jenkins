@@ -18,8 +18,8 @@ run `sudo nano install-jenkins.yml` then write the lines present in thie file ht
 sudo ansible-playbook install-jenkins.yml
 
 # result - console
-![Demo](https://imgur.com/a/BY4MKwG.png)
+![](https://i.imgur.com/jHRXhKB.png)
 
 # result - output
-![](https://imgur.com/a/BY4MKwG)
+![](https://i.imgur.com/jHRXhKB.png)
 
