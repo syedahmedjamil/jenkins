@@ -11,7 +11,7 @@
 # create docker-compose.yml
 run `sudo nano docker-compose.yml` then write the lines present in this file https://github.com/syedahmedjamil/jenkins-session/blob/main/01/docker-compose.yml
     
-# create ansible playbook to install jenkins
+# create ansible playbook to install jenkins using docker
 run `sudo nano install-jenkins.yml` then write the lines present in thie file https://github.com/syedahmedjamil/jenkins-session/blob/main/01/install-jenkins.yml
 
 # run playbook
