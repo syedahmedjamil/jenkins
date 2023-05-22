@@ -24,6 +24,6 @@ sudo ansible-playbook install-jenkins.yml
 # result - console
 ![](https://i.imgur.com/h8EsWjo.png)
 
-# result - output
+# result - web
 ![](https://i.imgur.com/jHRXhKB.png)
 
