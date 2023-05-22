@@ -1,0 +1,38 @@
+---
+- name: install and run jenkins on ubuntu using docker image
+  hosts: localhost
+
+  tasks:
+    - name: remove docker old version
+      shell: |
+        sudo apt-get remove docker docker-engine docker.io containerd runc
+        echo "ignoring this step"
+      register: result
+
+    - name: setup docker repo
+      shell: |
+        sudo apt-get update
+        sudo apt-get install ca-certificates curl gnupg
+        sudo install -m 0755 -d /etc/apt/keyrings
+        curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
+        sudo chmod a+r /etc/apt/keyrings/docker.gpg
+        sudo echo "deb [arch="$(dpkg --print-architecture)" signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu "$(. /etc/os-release && echo "$VERSION_CODENAME")" stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+      register: result
+
+    - name: install docker engine
+      shell: |
+        sudo apt-get update
+        sudo yes | apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+      register: result
+
+    - name: configure jenkins_home
+      shell: |
+        sudo mkdir jenkins_home
+        sudo useradd -u 1000 jenkins_user
+        sudo chown 1000:1000 jenkins_home
+        sudo chgrp 1000 jenkins_home
+      register: result
+
+    - name: run jenkins using docker compose file
+      shell: sudo docker compose -f docker-compose.yml up -d
+      register: result
