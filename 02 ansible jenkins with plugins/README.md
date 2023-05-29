@@ -17,12 +17,12 @@ plugins included :
 - ansible --version
 
 # create Dockerfile
-run `sudo nano Dockerfile` then paste the contents of this file -> https://github.com/syedahmedjamil/jenkins-session/blob/main/02/Dockerfile
+run `sudo nano Dockerfile` then paste the contents of this file -> https://github.com/syedahmedjamil/jenkins-session/blob/main/02%20ansible%20jenkins%20with%20plugin/Dockerfile
 # create docker-compose.yml
-run `sudo nano docker-compose.yml` then paste the contents of this file -> https://github.com/syedahmedjamil/jenkins-session/blob/main/02/docker-compose.yml
+run `sudo nano docker-compose.yml` then paste the contents of this file -> https://github.com/syedahmedjamil/jenkins-session/blob/main/02%20ansible%20jenkins%20with%20plugin/docker-compose.yml
     
 # create ansible playbook to install jenkins using docker
-run `sudo nano install-jenkins.yml` then paste the contents of this file -> https://github.com/syedahmedjamil/jenkins-session/blob/main/02/install-jenkins.yml
+run `sudo nano install-jenkins.yml` then paste the contents of this file -> https://github.com/syedahmedjamil/jenkins-session/blob/main/02%20ansible%20jenkins%20with%20plugin/install-jenkins.yml
 
 # run playbook
 sudo ansible-playbook install-jenkins.yml
