@@ -2,7 +2,6 @@ def call(int buildNumber) {
   if (buildNumber % 2 == 0) {
     pipeline {
       agent any
-      2
       stages {
         stage('Even Stage') {
           steps {
