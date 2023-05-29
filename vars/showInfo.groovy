@@ -1,4 +1,4 @@
-def call(stage, time){
+def call(stage,time){
 	echo "Stage: ${stage}"
 	sh 'date'
 	sh 'id'
