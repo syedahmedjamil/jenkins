@@ -1,2 +1,2 @@
 # jenkins
-Jenkins related code and scripts
+Code and scripts to setup and work with Jenkins.
