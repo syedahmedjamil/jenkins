@@ -1,5 +1,5 @@
 # about
-ansible playbook to install and run jenkins using docker image on a fresh ubuntu server
+Ansible playbook to install and run Jenkins using Docker on a fresh ubuntu server
 
 
 # vm details

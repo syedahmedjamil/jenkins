@@ -1,5 +1,5 @@
 # about
-ansible playbook to install and run jenkins with plugins pre installed using docker image on a fresh ubuntu server
+Ansible playbook to install and run Jenkins with plugins pre installed using Docker on a fresh ubuntu server
 
 plugins included :
 - golang
