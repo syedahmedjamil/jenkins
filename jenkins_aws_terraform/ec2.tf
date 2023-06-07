@@ -42,7 +42,7 @@ resource "aws_instance" "dev" {
   }
 
   tags = {
-    Name        = "${var.PROJECT_NAME}.instance_dev"
+    Name        = "${var.PROJECT_NAME}.dev"
     Terraform   = "true"
     Environment = "dev"
   }
