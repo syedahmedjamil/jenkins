@@ -19,5 +19,5 @@ run `sudo nano docker-compose.yml` then write the lines present in this file [do
 run `sudo nano install-jenkins.yml` then write the lines present in thie file [install-jenkins.yml](https://github.com/syedahmedjamil/jenkins-scripts/blob/main/jenkins_ansible_basic/install-jenkins.yml)
 
 # run playbook
-sudo ansible-playbook install-jenkins.yml
+`sudo ansible-playbook install-jenkins.yml`
 
