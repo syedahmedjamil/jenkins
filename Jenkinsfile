@@ -13,7 +13,7 @@ pipeline {
           ],
           userRemoteConfigs: [
             [
-              url: 'https://github.com/syedahmedjamil/web_app.git',
+              url: 'https://github.com/syedahmedjamil/jenkins-scripts.git',
               credentialsId: '',
             ]
           ]
@@ -45,7 +45,7 @@ pipeline {
           sh 'id'
           sh 'sleep 1'
         sshagent(credentials: ['creds_srv']) {
-          sh 'ssh -o StrictHostKeyChecking=no ubuntu@ec2-13-235-45-243.ap-south-1.compute.amazonaws.com "cd jenkins-scripts && git pull && go build ./web_app.go && ./web_app &"'
+          sh 'ssh -o StrictHostKeyChecking=no ubuntu@13.235.45.243 "cd jenkins-scripts && git pull && go build ./web_app.go && ./web_app &"'
         }
       }
     }
