@@ -45,7 +45,7 @@ pipeline {
           sh 'id'
           sh 'sleep 1'
         sshagent(credentials: ['creds_srv']) {
-          sh 'ssh -o StrictHostKeyChecking=no ubuntu@13.235.45.243 "cd jenkins-scripts && git pull && go build ./web_app.go && ./web_app &"'
+          sh 'ssh -o StrictHostKeyChecking=no ubuntu@13.235.45.243 "cd jenkins-scripts && git pull && /usr/local/go/bin/go build ./web_app.go && ./web_app &"'
         }
       }
     }
